@@ -1,0 +1,45 @@
+# NSE Swing Trader: Technical Indicator Explanation
+
+This document explains the technical indicators used in the NSE Swing Trader application to identify high-probability trades.
+
+## 1. RSI (Relative Strength Index)
+* **Purpose**: Measures trend momentum and overbought/oversold conditions.
+* **Scale**: 0 to 100.
+* **Application**: 
+    * Typically, >70 is Overbought and <30 is Oversold.
+    * This application looks for a "Sweet Spot" between **40 and 65**. This range identifies stocks that have confirmed momentum but still have room to move higher before becoming overextended.
+
+## 2. MACD (Moving Average Convergence Divergence)
+* **Purpose**: A trend-following momentum indicator.
+* **Components**: MACD Line (12 EMA - 26 EMA), Signal Line (9 EMA of MACD), and Histogram.
+* **Application**: 
+    * **Bullish Crossover**: When the MACD line crosses above the Signal line.
+    * **Histogram Direction**: Rising bars indicate accelerating momentum, which is a strong buy signal for swing traders.
+
+## 3. Bollinger Bands
+* **Purpose**: Measures price volatility and relative price levels.
+* **Components**: A middle Simple Moving Average (20-day) and two standard deviation bands (Upper and Lower).
+* **Application**: 
+    * **Pullback Entry**: When the price is near the Lower Band, it suggests the stock has pulled back and may be ready for a bounce back toward the mean.
+
+## 4. ATR (Average True Range)
+* **Purpose**: Measures market volatility (not direction).
+* **Application**: 
+    * **Risk Management**: Used to set dynamic Stop-Losses and Targets. 
+    * A stop-loss of **1.5x ATR** ensures you aren't knocked out of a trade by normal daily price fluctuations ("market noise"), but are exited if the actual trend changes.
+
+## 5. Support & Resistance
+* **Purpose**: Identifies price levels where a stock historically reverses or stalls.
+* **Application**: 
+    * **Support**: The "floor" where buyers emerge.
+    * **Resistance**: The "ceiling" where sellers emerge.
+    * The application scans the last 20 days of swing highs and lows to find these critical psychological price zones.
+
+## 6. EMA (Exponential Moving Average)
+* **Purpose**: A weighted moving average that reacts faster to recent price changes than a simple moving average.
+* **Application**: 
+    * Uses **20-period** (short-term) and **50-period** (medium-term) averages.
+    * A stock is considered in a healthy uptrend if **Price > EMA20** and **EMA20 > EMA50**.
+
+---
+*Note: This information is for educational purposes only and does not constitute financial advice.*
